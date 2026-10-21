@@ -3,148 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Negotiation 101 – Term Sheet | Evans Outfitters / Rocca Holdings</title>
+<title>Negotiation 101 – Term Sheet | Evans Outfitters / Rocca</title>
 <style>
-  body { font-family: system-ui, -apple-system, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #222; }
-  h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
-  h2 { font-size: 1.2rem; margin-top: 2rem; }
-  .subtitle { color: #555; margin-bottom: 2rem; }
-  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-  th, td { border: 1px solid #ddd; padding: 12px 14px; vertical-align: top; text-align: left; }
-  th { background: #f6f6f6; font-weight: 600; width: 220px; }
-  details { margin-top: 8px; }
-  summary { cursor: pointer; color: #0366d6; font-weight: 500; }
-  summary:hover { text-decoration: underline; }
-  .why { margin: 10px 0 0 0; padding: 10px 12px; background: #f8f9fa; border-left: 3px solid #0366d6; font-size: 0.95rem; }
-  .sources { margin-top: 2.5rem; padding: 16px; background: #f8f9fa; border-radius: 6px; }
-  .sources h2 { margin-top: 0; font-size: 1.1rem; }
-  .sources ul { margin: 0.5rem 0 0 0; padding-left: 1.2rem; }
-  .sources a { color: #0366d6; text-decoration: none; }
+  :root {
+    --navy: #1a365d;
+    --teal: #2c7a7b;
+    --light: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --accent: #2b6cb0;
+    --text: #2d3748;
+    --muted: #718096;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+    color: white;
+    padding: 2.5rem 1.25rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.4rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+  }
+  .term-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .term-header {
+    background: #edf2f7;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+  .term-body {
+    padding: 1rem;
+  }
+  .term-value {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+  details {
+    margin-top: 0.5rem;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    outline: none;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "▶ ";
+    display: inline-block;
+    transition: transform 0.15s;
+  }
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+  .why {
+    margin: 0.75rem 0 0;
+    padding: 0.85rem 1rem;
+    background: #ebf8ff;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    color: #2a4365;
+  }
+  .sources {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-top: 2rem;
+  }
+  .sources h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    color: var(--navy);
+  }
+  .sources p {
+    margin: 0 0 0.75rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .sources ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .sources li {
+    margin-bottom: 0.4rem;
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
   .sources a:hover { text-decoration: underline; }
-  .footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  @media (min-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .container { padding: 2rem 1.5rem 4rem; }
+  }
 </style>
 </head>
 <body>
-<h1>Term Sheet – Recommended Terms</h1>
-<p class="subtitle">Evans Outfitters, LLC → Rocca Holdings, Inc. (Lucerne)<br>DAV Patriot Boot Camp – Negotiation Workshop</p>
+<header>
+  <h1>Negotiation 101</h1>
+  <p>Recommended Term Sheet<br>Evans Outfitters → Rocca Holdings (Lucerne)</p>
+</header>
 
-<table>
-  <tr>
-    <th>Price</th>
-    <td>
-      $2,700,000 (subject to quality-of-earnings adjustment and Kentucky store election)
+<div class="container">
+  <div class="term-card">
+    <div class="term-header">Price</div>
+    <div class="term-body">
+      <p class="term-value">$2,700,000 (subject to quality-of-earnings adjustment and Kentucky store election)</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Buyer’s stated ceiling was roughly 3× average net profit (~$2.7M). Seller’s flex floor was ~$2.56M (80% of their $3.2M ask). $2.7M lands at the top of buyer’s comfort zone and just above seller’s “other terms must be good” number. It also leaves room for the quality-of-earnings adjustment once personal expenses and the weak Kentucky store are quantified.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Earnout</th>
-    <td>
-      Up to $300,000 additional if trailing-twelve-month adjusted EBITDA ≥ $850,000 in the first 12 months post-closing
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Earnout</div>
+    <div class="term-body">
+      <p class="term-value">Up to $300,000 additional if trailing-twelve-month adjusted EBITDA ≥ $850,000 in the first 12 months post-closing</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Buyer wanted a meaningful performance contingency; seller resisted any earnout that made the upfront payment small. A modest $300k cap tied to a clear EBITDA threshold (above recent run-rate) gives buyer downside protection without turning the deal into a bet the sellers have to win. It also partially bridges the remaining valuation gap.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Payment Terms</th>
-    <td>
-      60% ($1,620,000) at closing; 25% ($675,000) at 6 months; remaining 15% ($405,000) at 12 months or offset by earnout
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Payment Terms</div>
+    <div class="term-body">
+      <p class="term-value">60% ($1,620,000) at closing; 25% ($675,000) at 6 months; remaining 15% ($405,000) at 12 months or offset by earnout</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Buyer preferred a three-year stretch because of existing debt. Seller wanted essentially all cash within six months. 60/25/15 gets seller more than half the money at closing and the large majority within six months, while still giving buyer a one-year cash-flow cushion. The final tranche can be reduced by any earnout shortfall, which aligns incentives.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Owner Arrangement</th>
-    <td>
-      Ashley: 9-month consulting agreement, minimum 25 hours/week. Terry: 6-month consulting agreement, minimum 15 hours/week. Both at reduced rates vs. current owner salaries.
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Owner Arrangement</div>
+    <div class="term-body">
+      <p class="term-value">Ashley: 9-month consulting agreement, minimum 25 hours/week. Terry: 6-month consulting agreement, minimum 15 hours/week. Both at reduced rates vs. current owner salaries.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Buyer needs Ashley more than Terry for transition and views a full year as ideal. Seller wants to exit as quickly as possible and prefers ≤30 hours/week. Nine months for Ashley and six for Terry, both at reduced hours, is a practical middle ground. Framing it as consulting rather than employment also reduces benefits and termination-risk friction.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Owner Non-Compete</th>
-    <td>
-      24 months, Cincinnati MSA + any markets in which Rocca operates or has announced plans to open during the non-compete period.
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Owner Non-Compete</div>
+    <div class="term-body">
+      <p class="term-value">24 months, Cincinnati MSA + any markets in which Rocca operates or has announced plans to open during the non-compete period.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Twenty-four months is the number Rocca asked for and is standard market practice for a founder-led retail business where the owners are the brand and the customer relationships. It primarily protects Rocca—if Ashley or Terry could open a competing outfitter across the street six months after closing, the $2.7M stops making sense. It also quietly protects the sellers, because a credible non-compete is what makes the buyer comfortable paying full price for goodwill that would otherwise evaporate. The geographic scope (Cincinnati metro plus markets Rocca actually operates in or has announced) keeps it from being an open-ended national restriction.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Exclusivity Period</th>
-    <td>
-      60 days
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Exclusivity Period</div>
+    <div class="term-body">
+      <p class="term-value">60 days</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Buyer’s ideal was 120 days (floor 45). Seller’s ideal was 30 days (ceiling ~60). Sixty days is the outer edge of what seller said they could live with and still inside buyer’s minimum. It is long enough for real diligence on three stores plus the clothing line, short enough to keep momentum.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Due Diligence Period</th>
-    <td>
-      Concurrent with exclusivity (60 days). Seller provides financials, inventory, employment files, and clothing-line documentation within first 15 days.
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Due Diligence Period</div>
+    <div class="term-body">
+      <p class="term-value">Concurrent with exclusivity (60 days). Seller provides financials, inventory, employment files, and clothing-line documentation within first 15 days.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Running it concurrent with exclusivity avoids extending the period seller dislikes. The 15-day document drop creates a clear early checkpoint so buyer is not waiting until day 45 to discover problems.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Confidentiality Terms</th>
-    <td>
-      Mutual NDA. Liquidated damages of $50,000 per material breach limited to (a) competitive use of information in the Cincinnati market or (b) solicitation of EO employees. No liquidated damages for ordinary disclosure or technical breaches.
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Confidentiality Terms</div>
+    <div class="term-body">
+      <p class="term-value">Mutual NDA. Liquidated damages of $50,000 per material breach limited to (a) competitive use of information in the Cincinnati market or (b) solicitation of EO employees. No liquidated damages for ordinary disclosure or technical breaches.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Seller wanted $100k liquidated damages per breach and was especially worried about employee poaching and competitive use. Buyer rejected unusual remedies. $50k liquidated damages limited to the two specific harms seller actually cares about is a real concession from buyer without creating an unlimited penalty regime.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Break Up Fee</th>
-    <td>
-      $35,000 payable by Rocca to EO if Rocca terminates exclusivity without cause or fails to proceed after satisfactory diligence. Seller bears its own legal fees.
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Break Up Fee</div>
+    <div class="term-body">
+      <p class="term-value">$35,000 payable by Rocca to EO if Rocca terminates exclusivity without cause or fails to proceed after satisfactory diligence. Seller bears its own legal fees.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Seller floated $50k plus legal fees. Buyer had no provision. $35k with each side bearing its own legal costs is enough to give seller some protection against a casual walk-away after exclusivity starts, but not so large that buyer will refuse to sign.</div>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <th>Additional Terms</th>
-    <td>
-      • Clothing line: Buyer acquires ownership; 2% net royalty to sellers for 3 years on apparel sales above $500k annual baseline (or sellers may elect to retain ownership and grant Rocca an exclusive license at a pre-agreed royalty).<br>
+    </div>
+  </div>
+
+  <div class="term-card">
+    <div class="term-header">Additional Terms</div>
+    <div class="term-body">
+      <p class="term-value">• Clothing line: Buyer acquires ownership; 2% net royalty to sellers for 3 years on apparel sales above $500k annual baseline (or sellers may elect to retain ownership and grant Rocca an exclusive license at a pre-agreed royalty).<br>
       • Kentucky store: Buyer may elect to close or exclude the Erlanger location with a corresponding $250k–$350k price reduction based on final diligence.<br>
       • Seller indemnity for the pending age-discrimination claim, capped at $100k.<br>
-      • Personal expenses run through the business will be added back for purchase-price calculation purposes but normalized going forward.
+      • Personal expenses run through the business will be added back for purchase-price calculation purposes but normalized going forward.</p>
       <details>
         <summary>Why these terms</summary>
         <div class="why">Clothing line is the highest-value asset both sides recognize. Giving buyer ownership (or a clean exclusive license) while leaving sellers a limited royalty or retention option addresses buyer’s strategic priority and seller’s willingness to trade price for continued upside. Kentucky is the weakest store on both sets of numbers; an explicit close/exclude election with a pre-agreed price band removes a future argument. The age-discrimination claim is an open liability; a capped indemnity is standard and protects buyer without making the sellers write a blank check. Personal expenses are already flagged by seller; treating them as add-backs for valuation but requiring clean books post-close is the normal quality-of-earnings outcome.</div>
       </details>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
 
-<div class="sources">
-  <h2>Source Materials</h2>
-  <p>Full text of the case files used to derive these terms. Click any link to open the original material.</p>
-  <ul>
-    <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/preliminary-case-file.md" target="_blank">Preliminary Case File (All Teams) – including financials</a></li>
-    <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/buyer-only.md" target="_blank">Buyer-Only Instructions</a></li>
-    <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/seller-only.md" target="_blank">Seller-Only Instructions</a></li>
-    <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/template-term-sheet.md" target="_blank">Blank Template Term Sheet</a></li>
-  </ul>
+  <div class="sources">
+    <h2>Source Materials</h2>
+    <p>Full text of the case files used to derive these terms.</p>
+    <ul>
+      <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/preliminary-case-file.md" target="_blank">Preliminary Case File (All Teams) – including financials</a></li>
+      <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/buyer-only.md" target="_blank">Buyer-Only Instructions</a></li>
+      <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/seller-only.md" target="_blank">Seller-Only Instructions</a></li>
+      <li><a href="https://github.com/raynino/negotiation-101/blob/main/sources/template-term-sheet.md" target="_blank">Blank Template Term Sheet</a></li>
+    </ul>
+  </div>
 </div>
 
-<p class="footer">These terms sit inside the ranges both parties wrote down and create clear trade-offs that can actually be negotiated.</p>
+<footer>
+  DAV Patriot Boot Camp – Negotiation Workshop<br>
+  These terms sit inside the ranges both parties wrote down and create clear trade-offs that can actually be negotiated.
+</footer>
 </body>
 </html>
